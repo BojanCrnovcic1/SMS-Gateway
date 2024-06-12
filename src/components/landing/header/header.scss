@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;   
+    width: 100%;
+    background-color: #515d48;
+    padding-bottom: 60px;
+    .header-left {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        .title {
+            padding: 40px;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 3.5rem;
+                word-break: break-word;
+                color: rgb(40, 38, 38);
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                word-break: break-word;
+                padding-top: 30px;
+                color: rgb(187, 185, 185);
+            }
+           
+        }
+
+        .header-left-more {
+            width: 100%;
+            padding: 0px 100px 0px 100px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap:20px;
+
+            .header-buttons {
+                align-items: center;
+                padding-left: 140px;
+
+                button {
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                    border: none;
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    background: #04afc2;
+                    color: #012529;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background: #024950;
+                    color: #04afc2;
+                    transition: background-color 0.3s color 0.3s;
+                }
+            }
+
+            .more-info {
+                align-items: center;
+                padding: 10px 0px 60px 100px;
+                color: rgb(165, 163, 163);
+            }
+        }
+
+    }
+
+    .header-right {
+        flex: 1;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+
+        .image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+
+            img {
+                width: 200px;
+                height: 400px;
+                transition: transform 0.6s ease; 
+            }
+            img:hover {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .header-right {
+            display: none;
+        }
+    }
+
+}
