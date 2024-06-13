@@ -44,7 +44,7 @@ const Login = () => {
         if (foundUser) {
             navigate('/user/dashboard');
         } else if (foundAdmin) {
-            navigate('/admin/dashboard');
+            navigate('/admin');
         } else {
             setMessageError("Invalid credentials");
         }

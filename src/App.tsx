@@ -5,6 +5,11 @@ import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import UserDashboard from './pages/user/UserDashboard'
 import AdminDashboard from './pages/administrator/AdminDashboard'
+import DashboardOverview from './components/administrator/dashboardOverview/DashboardOverview'
+import UserManagement from './components/administrator/userManagement/UserManagement'
+import MessageManagement from './components/administrator/messageManagement/MessageManagement'
+import Settings from './components/administrator/settings/Settings'
+import Reports from './components/administrator/reports/Reports'
 
 
 function App() {
@@ -28,8 +33,30 @@ function App() {
       element: <UserDashboard />
     },
     {
-      path: "/admin/dashboard",
-      element: <AdminDashboard />
+      path: "/admin",
+      element: <AdminDashboard />,
+      children: [
+        {
+          path: "overview",
+          element: <DashboardOverview />
+        },
+        {
+          path: "users",
+          element: <UserManagement />
+        },
+        {
+          path: "messages",
+          element: <MessageManagement />
+        },
+        {
+          path: "settings",
+          element: <Settings />
+        },
+        {
+          path: "reports",
+          element: <Reports />
+        }
+      ]
     }
   ])
 
