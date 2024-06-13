@@ -33,7 +33,7 @@ function App() {
       element: <UserDashboard />
     },
     {
-      path: "/admin",
+      path: "/admin/dashboard",
       element: <AdminDashboard />,
       children: [
         {
