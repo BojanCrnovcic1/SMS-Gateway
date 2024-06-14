@@ -5,7 +5,7 @@ const AboutAs = () => {
     <div className='about' id='aboutAs'>
         <div className='about-left'>
             <div className='about-image'>
-                <img src="./public/sms1.jpg" alt="" />
+                <img src="/sms1.jpg" alt="" />
             </div>
         </div>
         <div className='about-right'>

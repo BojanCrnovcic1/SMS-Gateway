@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className='header-right'>
             <div className='image'>
-               <img src="./public/Mobileee.jpg" alt="" />
+               <img src="/MObileee.jpg" alt="" />
             </div>
         </div>
     </div>
