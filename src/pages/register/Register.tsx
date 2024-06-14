@@ -10,12 +10,27 @@ const Register = () => {
     const [password, setPassword] = useState<string>("");
     const [messageError, setMessageError] = useState<string>("");
 
-  return (
-    <div className='register'>
+    const handleRegister = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        if (username === "" || email === "" || password === "") {
+            setMessageError("All fields are required.");
+        } else if (password.length < 6) {
+            setMessageError("Password must be at least 6 characters long.");
+        } else {
+            // Reset error message if validation passes
+            setMessageError("");
+            // Implement the registration logic here (e.g., API call)
+            console.log("Registration successful!");
+        }
+    };
+
+    return (
+        <div className='register'>
             <div className='register-container'>
                 <div className='register-card'>
                     <h1>Register</h1>
-                    <form>
+                    <form onSubmit={handleRegister}>
                         <input type='text' id='username' value={username} placeholder='username'
                                onChange={(e) => setUsername(e.target.value)} />
                         <input type='email' id='email' value={email} placeholder='email'
@@ -39,7 +54,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 }
 
-export default Register
+export default Register;

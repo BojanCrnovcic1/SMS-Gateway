@@ -12,7 +12,7 @@ function Footer() {
                 <div className='footer-item'>
                     <h2>Developers</h2>
                     <div className='footer-content'>
-                         <a href='https//github.com'><img src="./public/iconmonstr-github-3.svg" alt="" /></a>
+                         <a href='https://github.com/BojanCrnovcic1/SMS-Gateway'><img src="./public/iconmonstr-github-3.svg" alt="" /></a>
                     </div>
                 </div>
                 <div className='footer-item'>
