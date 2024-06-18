@@ -8,7 +8,7 @@ const AdminDashboard = () => {
         <SideBar />
         <div className='admin-container'>
             <div className='main-content'>
-                <h1>Administrator dashboard</h1>
+                <h1>Administrator Dashboard</h1>
             </div>
             <div className='content'>
                 <Outlet />
